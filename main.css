@@ -1,0 +1,24 @@
+*{
+   margin:0;
+   padding:0;
+   
+}
+body{
+   background-color: rgb(145, 201, 160);
+   height:100vh;
+   display:flex;
+   justify-content:center;
+   flex-direction:column;
+   align-items:center;
+   font-family: sans-serif;
+   color:white;
+}
+
+.Breaking-News{
+   height: 100vh;
+   width:50px;
+   padding: 10px;
+   margin:10px;
+  }
+
+
