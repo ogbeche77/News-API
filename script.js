@@ -9,7 +9,7 @@
     async function getISS() {
       const response = await fetch (api_url);
       //data from fetch comes as a stream and can be changed to format of choice
-      // The response can be converted to json as shown below(line 7 only)
+      // the data can be converted to json as shown below(see line 12)
       const data = await response.json();
       //name, longitiude & latitude can be replaced by any other property present in the object
       console.log(data);
@@ -33,39 +33,6 @@
        
        
        
-       
-       
-       
-       
-       
-       
-       
-       /*
-                
-                //store API url in a global  varaible
-    const api_url = "https://api.wheretheiss.at/v1/satellites/25544"
-
-    async function getISS() {
-      const response = await fetch (api_url);
-      //data from fetch comes as a stream and can be changed to format of choice
-      // The response can be converted to json as shown below(line 7 only)
-      const data = await response.json();
-      //longitiude & latitude can be replaced by any other property present in the object
-      const {latitude, longitude} = data;
-
-      document.getElementById("lat").textContent = latitude;
-      document.getElementById("long").textContent = longitude;
-
-     
-
-    }
-    getISS();
-
-*/
-    
-
-    
-    
     
     
     
