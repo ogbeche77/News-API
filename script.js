@@ -18,7 +18,7 @@
         
         
        document.getElementById("name").textContent = name;
-      document.getElementById("lat").textContent = latitude.toFixed(2); //toFixed() adds to just 2decimal places
+      document.getElementById("lat").textContent = latitude.toFixed(2); //toFixed() adds to 2decimal places
       document.getElementById("long").textContent = longitude.toFixed(2);
 
     }
