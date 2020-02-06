@@ -18,8 +18,8 @@
         
         
        document.getElementById("name").textContent = name;
-      document.getElementById("long").textContent = longitude;
-      document.getElementById("lat").textContent = latitude;
+      document.getElementById("lat").textContent = latitude.toFixed(2); //toFixed() adds to just 2decimal places
+      document.getElementById("long").textContent = longitude.toFixed(2);
 
     }
     getISS();
