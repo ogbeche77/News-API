@@ -1,37 +1,117 @@
+                
+         
+         
+         
+         
+          //store API url in a global  varaible
+    const api_url = "https://api.wheretheiss.at/v1/satellites/25544"
+
+    async function getISS() {
+      const response = await fetch (api_url);
+      //data from fetch comes as a stream and can be changed to format of choice
+      // The response can be converted to json as shown below(line 7 only)
+      const data = await response.json();
+      //name, longitiude & latitude can be replaced by any other property present in the object
+      console.log(data);
+       
+        const {name, longitude, latitude} = data;
+        
+        
+       document.getElementById("name").textContent = name;
+      document.getElementById("long").textContent = longitude;
+      document.getElementById("lat").textContent = latitude;
+
+    }
+    getISS();
+
+    //To ensure the data is refreshed with an interval and sent to the app
+    setInterval (getISS, 1000);
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       /*
+                
+                //store API url in a global  varaible
+    const api_url = "https://api.wheretheiss.at/v1/satellites/25544"
+
+    async function getISS() {
+      const response = await fetch (api_url);
+      //data from fetch comes as a stream and can be changed to format of choice
+      // The response can be converted to json as shown below(line 7 only)
+      const data = await response.json();
+      //longitiude & latitude can be replaced by any other property present in the object
+      const {latitude, longitude} = data;
+
+      document.getElementById("lat").textContent = latitude;
+      document.getElementById("long").textContent = longitude;
+
+     
+
+    }
+    getISS();
+
+*/
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   /* 
     //selecting the DOM
-    var breaking = document.querySelector(".Breaking-News");
-   
-
-var api = "https://newsapi.org/v2/everything?q=bitcoin&from=2020-01-05&sortBy=publishedAt&apiKey=0f3a910a5b884d168a49b92f427347f6";
+    
+    let breaking = document.querySelector(".Breaking-News");
+    let breaking1 = document.querySelector(".newsupdate");
+  
+ 
+var url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=0f3a910a5b884d168a49b92f427347f6";
            
-var req = new Request(api);
+var req = new Request(url);
 fetch(req)
-.then 
+.then(function(response){
+    return response.json()
+}) .then(function(jsonResponse){
+  console.log(jsonResponse)
+
+  breaking.textContent = jsonResponse.author;
+ 
+});
 
 
 
+ console.log(latitude);
+      console.log(longitude);
+*/
+
+ 
 
 
-             /*
-        fetch(api)
-        //keyword 'response' could be replaced with any word, response is converted to json as shown below
-        .then(response => {
-            return response.json();
-
-        })
-        .then(response =>{
-            // this can also be written as temperatureDegree.textContent =response.currently.temperature; (then the function can be discarded)
-            //temperatureDescription.textContent =response.currently.summary; etc
-            const {name} = response.source;
-
-           console.log(response);
-            
-            // we pull out the data for temperature, summary and timezone
-             //setting DOM elements that has been assigned a variable from line 6-8
-             //exact object properties can be checked on the console
-
-             breaking = name;
-            
-        });
-            
-            */
+        
