@@ -8,7 +8,7 @@
 
     async function getISS() {
       const response = await fetch (api_url);
-      //data from fetch comes as a stream and can be changed to format of choice
+      //data from fetch comes as a stream and can be changed to format of choice e.g text, blob, json
       // the data can be converted to json as shown below(see line 12)
       const data = await response.json();
       //name, longitiude & latitude can be replaced by any other property present in the object
